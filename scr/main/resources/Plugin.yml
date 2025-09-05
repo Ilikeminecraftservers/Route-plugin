@@ -1,0 +1,8 @@
+name: RoutePlugin
+main: com.example.routeplugin.RoutePlugin
+version: 1.0.0
+api-version: 1.16
+commands:
+  route:
+    description: Verwalte und folge Routen
+    usage: /route <args>

@@ -1,0 +1,8 @@
+# Standardpartikel für neu erstellte Routen
+default-particle: FLAME
+
+# Mindestabstand zwischen Punkten beim LineFollow (in Blöcken)
+linefollow-point-distance: 2.0
+
+# Abstand zwischen Partikeln auf Linien (geplant für Erweiterung)
+line-particle-spacing: 0.5

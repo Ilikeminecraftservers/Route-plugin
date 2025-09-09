@@ -1,46 +1,54 @@
 package com.example.routeplugin;
 
 import org.bukkit.Location;
-import org.bukkit.Particle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Route {
+
     private final String name;
-    private Particle particle;
-    private final List<Location> points;
+    private final List<Location> points = new ArrayList<>();
 
-    public Route(String name, Particle particle) {
+    public Route(String name) {
         this.name = name;
-        this.particle = particle;
-        this.points = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Particle getParticle() {
-        return particle;
-    }
-
-    public void setParticle(Particle particle) {
-        this.particle = particle;
-    }
-
+    /**
+     * Fügt einen Punkt zur Route hinzu.
+     * @param loc Location des Punktes
+     */
     public void addPoint(Location loc) {
         points.add(loc.clone());
     }
 
+    /**
+     * Gibt alle Punkte der Route zurück.
+     * @return Liste von Locations
+     */
     public List<Location> getPoints() {
         return points;
     }
 
-    public Location getPoint(int index) {
-        return points.get(index);
+    /**
+     * Gibt den Namen der Route zurück.
+     * @return Name
+     */
+    public String getName() {
+        return name;
     }
 
+    /**
+     * Entfernt alle Punkte der Route.
+     */
+    public void clearPoints() {
+        points.clear();
+    }
+
+    /**
+     * Anzahl der Punkte
+     * @return Punktzahl
+     */
     public int size() {
         return points.size();
     }

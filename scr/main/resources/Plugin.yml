@@ -1,8 +1,33 @@
 name: RoutePlugin
-main: com.example.routeplugin.RoutePlugin
 version: 1.0.0
-api-version: 1.16
+main: com.example.routeplugin.RoutePlugin
+api-version: 1.21
 commands:
   route:
-    description: Verwalte und folge Routen
-    usage: /route <args>
+    description: Hauptbefehl für Routen
+    usage: /<command> <create|edit>
+    aliases: [routen]
+    subcommands:
+      create:
+        description: Erstelle eine neue Route
+        usage: /route create <Name>
+      edit:
+        description: Bearbeite eine Route
+        usage: /route edit <linefollowstart|linefollowpause|linefollowunpause|point add|deselect|spacing>
+        subcommands:
+          linefollowstart:
+            description: Starte das Folgen der Route mit Partikeln
+          linefollowpause:
+            description: Pausiere das Folgen der Route
+          linefollowunpause:
+            description: Setze das Folgen der Route fort
+          point:
+            description: Füge einen Punkt hinzu
+            subcommands:
+              add:
+                description: Füge den aktuellen Standort als Punkt hinzu
+          deselect:
+            description: Beende die Bearbeitung der aktuellen Route
+          spacing:
+            description: Setze den Abstand zwischen den Partikeln
+            usage: /route edit spacing <Abstand in Blöcken>

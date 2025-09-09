@@ -1,8 +1,20 @@
-# Standardpartikel für neu erstellte Routen
-default-particle: FLAME
+# Abstand zwischen Partikeln in Blöcken
+particle-spacing: 0.5
 
-# Mindestabstand zwischen Punkten beim LineFollow (in Blöcken)
-linefollow-point-distance: 2.0
+# Partikeltyp für die Linien (Minecraft Particle Enum)
+particle-type: VILLAGER_HAPPY
 
-# Abstand zwischen Partikeln auf Linien (geplant für Erweiterung)
-line-particle-spacing: 0.5
+# Tick-Intervall für Line-Follow (10 = alle 0,5 Sekunden)
+linefollow-ticks: 10
+
+# Standardfarbe oder Farbeffekte für Partikel (optional, je nach Particle)
+particle-color: "#FFFFFF"
+
+# Maximale Anzahl gespeicherter Punkte pro Route
+max-points: 1000
+
+# Standard-Name für neue Routen, falls kein Name angegeben wird
+default-route-name: "NeueRoute"
+
+# Line-Follow automatisch starten beim Editieren
+auto-linefollow-on-edit: false
